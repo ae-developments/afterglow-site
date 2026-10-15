@@ -1,0 +1,19 @@
+/* Afterglow website: the app's colours and its own bundled fonts (no third-party requests) */
+@font-face{font-family:Gloock;font-weight:400;font-display:swap;src:url(fonts/gloock-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:"Hanken Grotesk";font-weight:400;font-display:swap;src:url(fonts/hanken-grotesk-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:"Hanken Grotesk";font-weight:700;font-display:swap;src:url(fonts/hanken-grotesk-latin-700-normal.woff2) format('woff2')}
+:root{--bg:#FFF8FA;--ink:#2A1420;--muted:#7E6371;--line:#ECDCE3;--accent:#A3245A;--soft:#F6DBE6}
+@media (prefers-color-scheme: dark){:root{--bg:#1B1016;--ink:#F7E8EE;--muted:#B396A4;--line:#3A2631;--accent:#EE6496;--soft:#4A1D31;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Hanken Grotesk",system-ui,sans-serif;padding:48px 20px 72px}
+main{max-width:680px;margin:0 auto}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0}
+h1{font-family:Gloock,Georgia,serif;font-weight:400;font-size:clamp(40px,8vw,60px);line-height:1.05;margin:6px 0 8px}
+h2{font-family:Gloock,Georgia,serif;font-weight:400;font-size:25px;margin:36px 0 6px}
+p{margin:0 0 12px}
+.meta{color:var(--muted);font-size:14px}
+.lead{font-size:20px;color:var(--muted)}
+.short{background:var(--soft);border-radius:18px;padding:4px 22px 10px;margin-top:24px}
+.short h2{margin-top:18px}
+a{color:var(--accent);text-underline-offset:3px}
+.links{padding:0;list-style:none;display:grid;gap:8px;margin-top:24px}
