@@ -17,3 +17,7 @@ p{margin:0 0 12px}
 .short h2{margin-top:18px}
 a{color:var(--accent);text-underline-offset:3px}
 .links{padding:0;list-style:none;display:grid;gap:8px;margin-top:24px}
+.btn{display:block;max-width:420px;margin:24px 0 10px;padding:17px 20px;border-radius:16px;background:var(--accent);color:var(--bg);font-weight:700;font-size:19px;text-align:center;text-decoration:none}
+.help{margin-top:32px;padding-top:4px;border-top:1px solid var(--line)}
+.help h2{margin-top:20px}
+.help .links{margin-top:12px}

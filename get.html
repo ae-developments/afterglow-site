@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get Afterglow</title>
+<meta name="description" content="Afterglow: a private diary for your love life. Free on Google Play for Android.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <p class="eyebrow">Free for Android</p>
+  <h1>Afterglow</h1>
+  <p class="lead">A private diary for your love life. Everything stays encrypted on your phone.</p>
+  <a class="btn" id="play" href="https://play.google.com/store/apps/details?id=com.afterglow.tracker">Open in Google Play</a>
+  <p class="meta">For adults 18 and older.</p>
+  <section class="help" id="help" hidden>
+    <h2>Nothing happened?</h2>
+    <p>Some apps block links to the store. Try one of these:</p>
+    <ul class="links">
+      <li><a id="chrome" href="https://play.google.com/store/apps/details?id=com.afterglow.tracker">Open in Chrome</a></li>
+      <li><a href="https://play.google.com/store/apps/details?id=com.afterglow.tracker">Open the store page</a></li>
+      <li>Tap the ⋯ menu in this window and open the page in your browser</li>
+      <li>Open the Play Store yourself and search <strong>afterglow kiss</strong></li>
+    </ul>
+  </section>
+  <ul class="links"><li><a href="privacy.html">Privacy policy</a></li></ul>
+</main>
+<script>
+// On Android, go straight to the Play Store app or Chrome, because in-app browsers can ignore plain store links
+if (/android/i.test(navigator.userAgent)) {
+  var back = ';S.browser_fallback_url=' + encodeURIComponent('https://play.google.com/store/apps/details?id=com.afterglow.tracker') + ';end';
+  document.getElementById('play').href = 'intent://details?id=com.afterglow.tracker#Intent;scheme=market;package=com.android.vending' + back;
+  document.getElementById('chrome').href = 'intent://play.google.com/store/apps/details?id=com.afterglow.tracker#Intent;scheme=https;package=com.android.chrome' + back;
+  document.getElementById('help').hidden = false;
+}
+</script>
+</body>
+</html>
